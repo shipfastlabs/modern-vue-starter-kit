@@ -1,4 +1,4 @@
-# Laravel + Vue Starter Kit
+# Laravel + Vue Starter Kit + Modern PHP Tooling
 
 ## Introduction
 
@@ -7,6 +7,29 @@ Our Vue starter kit provides a robust, modern starting point for building Larave
 Inertia allows you to build modern, single-page Vue applications using classic server-side routing and controllers. This lets you enjoy the frontend power of Vue combined with the incredible backend productivity of Laravel and lightning-fast Vite compilation.
 
 This Vue starter kit utilizes Vue 3 and the Composition API, TypeScript, Tailwind, and the [shadcn-vue](https://www.shadcn-vue.com) component library.
+
+## Enhanced Features
+
+This kit extends the official Laravel Vue starter with additional development tools and quality assurance:
+
+- **PHPStan (Maximum Level)**: Static analysis at the highest level for robust type checking
+- **Laravel Pint**: Automated styling with opinionated rules approved by Nuno Maduro
+- **Rector**: Automated PHP refactoring and upgrades
+- **Testing Suite**: 
+  - Pest PHP for elegant testing
+  - Architecture tests for maintaining code structure
+- **IDE Helper**: Enhanced IDE support for Laravel facades and models
+
+> This starter kit is regularly synchronized with the official Laravel Vue starter kit to ensure you get the latest features and security updates.
+
+## Installation
+
+Installation can be done by laravel installer.
+
+```bash
+laravel new --using=shipfastlabs/modern-vue-starter-kit modern-vue-app
+```
+
 
 ## Official Documentation
 

@@ -1,5 +1,7 @@
 # Laravel + Vue Starter Kit + Modern PHP Tooling
 
+<a href="https://herd.laravel.com/new?starter-kit=shipfastlabs/modern-vue-starter-kit"><img src="https://img.shields.io/badge/Install%20with%20Herd-f55247?logo=laravel&logoColor=white"></a>
+
 ## Introduction
 
 Our Vue starter kit provides a robust, modern starting point for building Laravel applications with a Vue frontend using [Inertia](https://inertiajs.com).

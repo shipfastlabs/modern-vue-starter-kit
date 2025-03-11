@@ -20,8 +20,10 @@ final class PasswordController extends Controller
      */
     public function edit(Request $request): Response
     {
+        $user = $request->user();
+
         return Inertia::render('settings/Password', [
-            'mustVerifyEmail' => $request->user() instanceof MustVerifyEmail,
+            'mustVerifyEmail' => $user instanceof MustVerifyEmail,
             'status' => $request->session()->get('status'),
         ]);
     }
@@ -31,13 +33,14 @@ final class PasswordController extends Controller
      */
     public function update(Request $request): RedirectResponse
     {
+        /** @var array<string, string> $validated */
         $validated = $request->validate([
             'current_password' => ['required', 'current_password'],
             'password' => ['required', Password::defaults(), 'confirmed'],
         ]);
 
-        $request->user()->update([
-            'password' => Hash::make($validated['password']),
+        $request->user()?->update([
+            'password' => Hash::make((string) $validated['password']),
         ]);
 
         return back();

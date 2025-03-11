@@ -9,9 +9,10 @@ parameters:
         - database/factories
         - routes
         - config
-    level: 5
+    level: 10
     checkOctaneCompatibility: true
     checkModelProperties: true
+    treatPhpDocTypesAsCertain: false
     excludePaths:
         - '**/ide-helper.php'
         - '**/ide_helper_models.php'

@@ -1,0 +1,18 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+    - vendor/nesbot/carbon/extension.neon
+
+parameters:
+    paths:
+        - app
+        - bootstrap
+        - database/factories
+        - routes
+        - config
+    level: 5
+    checkOctaneCompatibility: true
+    checkModelProperties: true
+    excludePaths:
+        - '**/ide-helper.php'
+        - '**/ide_helper_models.php'
+        - '**/phpstorm.meta.php'

@@ -2,10 +2,12 @@
     "$schema": "https://getcomposer.org/schema.json",
     "name": "shipfastlabs/modern-vue-starter-kit",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
+    "description": "The VILT starter kit with opinionated modern tooling setup.",
     "keywords": [
         "laravel",
-        "framework"
+        "framework",
+        "VILT",
+        "starter-kit"
     ],
     "license": "MIT",
     "require": {
@@ -25,7 +27,8 @@
         "laravel/sail": "^1.41",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.6",
-        "pestphp/pest": "^3.7"
+        "pestphp/pest": "^3.7",
+        "pestphp/pest-plugin-type-coverage": "^3.4"
     },
     "autoload": {
         "psr-4": {
@@ -63,6 +66,13 @@
             "npm run build:ssr",
             "Composer\\Config::disableProcessTimeout",
             "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"php artisan pail --timeout=0\" \"php artisan inertia:start-ssr\" --names=server,queue,logs,ssr"
+        ],
+        "lint": [
+            "./vendor/bin/pint --ansi",
+            "./vendor/bin/rector --ansi",
+            "./vendor/bin/pest --parallel",
+            "./vendor/bin/pest --type-coverage --ansi --memory-limit=-1 --min=100",
+            "./vendor/bin/phpstan analyse -c phpstan.neon --ansi --memory-limit=-1"
         ]
     },
     "extra": {

@@ -20,7 +20,9 @@ This kit extends the official Laravel Vue starter with additional development to
 - **Testing Suite**: 
   - Pest PHP for elegant testing
   - Architecture tests for maintaining code structure
+  - Type Coverage for ensuring type safety
 - **IDE Helper**: Enhanced IDE support for Laravel facades and models
+- **Updated APP Service Provider**: Updated to use some secure and modern practices
 
 > This starter kit is regularly synchronized with the official Laravel Vue starter kit to ensure you get the latest features and security updates.
 

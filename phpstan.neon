@@ -1,0 +1,18 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+    - vendor/nesbot/carbon/extension.neon
+
+parameters:
+    paths:
+        - app/
+        - bootstrap
+        - routes
+    level: 7
+    tmpDir: /tmp/phpstan
+    treatPhpDocTypesAsCertain: false
+    reportUnmatchedIgnoredErrors: false
+    ignoreErrors:
+        - '#uses generic trait Illuminate\\Database\\Eloquent\\Factories\\HasFactory but does not specify its types#'
+        - '#Method App\\Livewire\\Actions\\Logout::__invoke\(\) never returns .* so it can be removed from the return type#'
+        - '#::passwordRules\(\) should return .* but returns array<int, Illuminate\\Validation\\Rules\\Password\|string>#'
+        - '#::emailRules\(\) should return .* but returns array<int, Illuminate\\Validation\\Rules\\Unique\|string>#'
